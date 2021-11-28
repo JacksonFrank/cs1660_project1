@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  namespace: default
+  name: job-robot
+rules:
+- apiGroups: ["", "apps"] # "" indicates the core API group
+  resources: ["pods", "services", "deployments", "nodes"]
+  verbs: ["list", "get", "create", "update", "delete", "patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: job-robot
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: default # Name of the ServiceAccount
+  namespace: default
+roleRef:
+  kind: ClusterRole # This must be Role or ClusterRole
+  name: job-robot # This must match the name of the Role or ClusterRole you wish to bind to
+  apiGroup: rbac.authorization.k8s.io
