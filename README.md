@@ -45,7 +45,7 @@ Once all of the images are in the registry, the yaml files located in the `kube_
 If this service is being run on the cloud, the firewall must be configured to allow incoming traffic on TCP ports 30001, 30002, 30003, 30004, and 30006. To make a rule for allowing traffic on these ports for GCP, run the following command:
 
 ```
-gcloud compute firewall-rules create cs1660-project1-allow-public-traffic --allow tcp:30001-3006
+gcloud compute firewall-rules create cs1660-project1-allow-public-traffic --allow tcp:30001-30006
 ```
 
 The `setup.sh` file located in the `kube_setup/` directory must be executable from the command line. To do this, navigate to the `kube_setup/` directory and run the command:
