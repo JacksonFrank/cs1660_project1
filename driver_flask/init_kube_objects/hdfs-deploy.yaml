@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hdfs-namenode-container
-        image: gcr.io/fair-solution-326122/bde2020/hadoop-namenode:latest
+        image: <HDFS Namenode image here (https://hub.docker.com/r/bde2020/hadoop-namenode)>
         ports:
         - containerPort: 9000
         - containerPort: 9870
@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
       - name: hdfs-datanode-container
-        image: gcr.io/fair-solution-326122/bde2020/hadoop-datanode:latest
+        image: <HDFS Datanode image here (https://hub.docker.com/r/bde2020/hadoop-datanode)>
         ports:
         - containerPort: 9867
         - containerPort: 9866

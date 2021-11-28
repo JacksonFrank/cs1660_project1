@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-driver-web
-        image: gcr.io/fair-solution-326122/jfrank206/project1-driver:latest
+        image: <driver image here (https://hub.docker.com/r/jfrank206/project1-driver)>
         ports:
         - containerPort: 80
 ---

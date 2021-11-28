@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: notebook-container
-        image: gcr.io/fair-solution-326122/jfrank206/notebook-open:latest
+        image: <Jupyter Notebook image here (https://hub.docker.com/r/jfrank206/notebook-open)>
         ports:
         - containerPort: 8888
 ---

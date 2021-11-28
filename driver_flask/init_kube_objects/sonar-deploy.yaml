@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sonar-container
-        image: gcr.io/fair-solution-326122/jfrank206/sonarqube-sonarscanner:latest
+        image: <SonarQube and SonarScanner image here (https://hub.docker.com/r/jfrank206/sonarqube-sonarscanner)>
         ports:
         - containerPort: 9000
 ---

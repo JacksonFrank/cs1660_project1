@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spark-container
-        image: gcr.io/fair-solution-326122/bitnami/spark:latest
+        image: <Apache Spark image here (https://hub.docker.com/r/bitnami/spark/)>
         ports:
         - containerPort: 8080
 ---
