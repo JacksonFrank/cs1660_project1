@@ -38,7 +38,7 @@ Must be on machine with `kubectl` configured to manage a valid existing Kubernet
 
 Must have `kube_setup/` directory from this repository copied onto the machine
 
-Must have all of the images listed under the "Links to Deployed Docker Images" section accessible by the machine's Docker Container registry. If this program is running on GCP, this would entail pulling each of the images from the links, tagging them by adding the prefix `gcr.io/<project-name>/`to the names of the images, and then pushing these containerized images using an authenticated instance of the GCloud SDK.
+Must have all of the images listed under the "Links to Deployed Docker Images" section accessible by the machine's Docker Container registry. If this program is running on GCP, this would entail pulling each of the images from the links, tagging them by adding the prefix `gcr.io/<project-name>/` to the names of the images, and then pushing these containerized images using an authenticated instance of the GCloud SDK.
 
 Once all of the images are in the registry, the yaml files located in the `kube_setup/init_kube_objects/` directory must be configured to point to these images. Within this repository, these yaml files currently have where the images need to be defined marked with the docker hub link of the image that needs to be defined there. If these yaml files aren't properly configured, the setup of the necessary Kubernetes deployments will fail.
 
