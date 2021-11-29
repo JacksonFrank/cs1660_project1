@@ -40,7 +40,17 @@ Must have `kube_setup/` directory from this repository copied onto the machine
 
 Must have all of the images listed under the "Links to Deployed Docker Images" section accessible by the machine's Docker Container registry. If this program is running on GCP, this would entail pulling each of the images from the links, tagging them by adding the prefix `gcr.io/<project-name>/` to the names of the images, and then pushing these containerized images using an authenticated instance of the GCloud SDK.
 
-Once all of the images are in the registry, the yaml files located in the `kube_setup/init_kube_objects/` directory must be configured to point to these images. Within this repository, these yaml files currently have where the images need to be defined marked with the docker hub link of the image that needs to be defined there. If these yaml files aren't properly configured, the setup of the necessary Kubernetes deployments will fail.
+Once all of the images are in the registry, the yaml files located in the `kube_setup/init_kube_objects/` directory must be configured to point to these images. Within this repository, these yaml files currently have where the images need to be defined marked with the docker hub link of the image that needs to be defined there. If these yaml files aren't properly configured, the setup of the necessary Kubernetes deployments will fail. For example, in `kube_setup/init_kube_objects/flask-driver.yaml`, you would need to change:
+
+![](C:\Users\jacks\Dev\cs1660\project\yaml-link-screenshot.png)
+
+To something like this:
+
+![](C:\Users\jacks\Dev\cs1660\project\yaml-image-screenshot.png)
+
+These changes need to occur in all of the Yaml files within the `kube_setup/init_kube_objects/` directory except for `kube_setup/init_kube_objects/kube-auth.yaml` wherever the `image:` field appears within the files.
+
+
 
 If this service is being run on the cloud, the firewall must be configured to allow incoming traffic on TCP ports 30001, 30002, 30003, 30004, and 30006. To make a rule for allowing traffic on these ports for GCP, run the following command:
 
@@ -82,5 +92,11 @@ python print_url.py
 
 Once you navigate to the web app driver, the web page will offer options to launch and disable each of the four micro-services. By clicking the link to launch a microservice, the cluster will re-scale that deployment in order to have an instance of that microservice running. The user will also be presented with a second page that has a link to go to the service they had just chosen. This link will open a new tab that will have a web UI of the microservice that was just launched. In the main menu, by clicking any of the disable microservice links, the microservice associated with the link will be rescaled back to zero, and will therefore stop being run on the cluster.
 
+*Important Note: The deployments and services that make up this system do often take some time to load. When using, please be patient for things to load!*
 
+
+
+[Functionality Video](https://drive.google.com/file/d/1w_k5hmOMtOLQ12ZOczOXvtwdGp2sXm0e/view?usp=sharing)
+
+[Code Walkthrough Video](https://drive.google.com/file/d/1VRFOjsEOgNWGUmTiqrhgQrWUlvSf_IyE/view?usp=sharing)
 
