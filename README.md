@@ -42,11 +42,11 @@ Must have all of the images listed under the "Links to Deployed Docker Images" s
 
 Once all of the images are in the registry, the yaml files located in the `kube_setup/init_kube_objects/` directory must be configured to point to these images. Within this repository, these yaml files currently have where the images need to be defined marked with the docker hub link of the image that needs to be defined there. If these yaml files aren't properly configured, the setup of the necessary Kubernetes deployments will fail. For example, in `kube_setup/init_kube_objects/flask-driver.yaml`, you would need to change:
 
-![](C:\Users\jacks\Dev\cs1660\project\yaml-link-screenshot.png)
+![](yaml-link-screenshot.png)
 
 To something like this:
 
-![](C:\Users\jacks\Dev\cs1660\project\yaml-image-screenshot.png)
+![](yaml-image-screenshot.png)
 
 These changes need to occur in all of the Yaml files within the `kube_setup/init_kube_objects/` directory except for `kube_setup/init_kube_objects/kube-auth.yaml` wherever the `image:` field appears within the files.
 
