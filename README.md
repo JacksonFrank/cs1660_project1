@@ -46,7 +46,7 @@ Once all of the images are in the registry, the yaml files located in the `kube_
 
 To something like this:
 
-![](C:\Users\jacks\Dev\cs1660\project\public\yaml-image-screenshot.png)
+![](yaml-image-screenshot.png)
 
 These changes need to occur in all of the Yaml files within the `kube_setup/init_kube_objects/` directory except for `kube_setup/init_kube_objects/kube-auth.yaml` wherever the `image:` field appears within the files.
 
