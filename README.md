@@ -94,9 +94,3 @@ Once you navigate to the web app driver, the web page will offer options to laun
 
 *Important Note: The deployments and services that make up this system do often take some time to load. When using, please be patient for things to load!*
 
-
-
-[Functionality Video](https://drive.google.com/file/d/1w_k5hmOMtOLQ12ZOczOXvtwdGp2sXm0e/view?usp=sharing)
-
-[Code Walkthrough Video](https://drive.google.com/file/d/1VRFOjsEOgNWGUmTiqrhgQrWUlvSf_IyE/view?usp=sharing)
-
