@@ -34,7 +34,7 @@
 
 #### Preconditions
 
-Must be on machine with `kubectl` configured to manage a valid existing Kubernetes structure
+Must be on machine with `kubectl` configured to manage a valid existing Kubernetes cluster
 
 Must have `kube_setup/` directory from this repository copied onto the machine
 
